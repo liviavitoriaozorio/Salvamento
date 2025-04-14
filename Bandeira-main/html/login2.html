@@ -16,43 +16,60 @@
         <video autoplay muted loop class="background">
             <source src="../img/background-video.mp4" type="video/mp4">
         </video>
+        <!-- Flag Rush -->
+         <img src="../img/logo-escrita-icon.png">
+        <!-- Janela -->
+         <div class="janela">
+           
+            <!-- Cabeçalho -->
+             <header>
+                <nav>
+                    <!-- Imagem da Logo -->
+                    <div class="img-logo">
+                        <img src="..img/logo-imagem-icon.png">
+                    </div>
 
-        <!-- Logo -->
-        <section class="Nome">
-            <img src="../img/logo-escrita-icon.png" alt="Nome Da Marca">
-        </section>
-
-
-        <!-- MAIN (contém o conteúdo central) -->
-        <div class="container">
-            <header class="menu">
-                <img src="../img/logo-imagem-icon.png" alt="Logo Da Marca" class="logo">
-                <nav class="topicos">
-                    <ul>
-                        <li class="topico"><img src="../img/lampada-icon-computador.png" alt="lambada"><a href="#Sobre">Sobre</a></li>
-                        <li class="topico"><img src="../img/home-icon-computador.png" alt="casa"><a href="#Inicio">Início</a></li>
-                        <li class="topico"><img src="../img/bug-icon-computador.png" alt="inseto"><a href="#ReportBug">Report Bug</a></li>
-                    </ul>
+                    <div class="menu">
+                        <ul>
+                            <!-- Menu do sobre -->
+                            <li id="sobre"><a href="#"><img src="../img/lampada-icon-computador.png">Sobre</a></li>
+                            <!-- Menu do início -->
+                            <li id="inicio"><a href="#"><img src="../img/home-icon-computador.png">Início</a></li>
+                            <!-- Menu do report bug -->
+                            <li id="report-bug"><a href="#"><img src="../img/bug-icon-computador.png">Report Bug</a></li>
+                        </ul>
+                    </div>
+                    <div class="topicos">
+                        <ul>
+                            <!-- Topico do instagram -->
+                            <li id="instagram"><a href="#"><img src="../img/instagram-icon-computador.png"></a></li>
+                            <!-- Topico do tiktok -->
+                            <li id="tiktok"><a href="#"><img src="../img/tiktok-icon-computador.png"></a></li>
+                            <!-- Topico do twitter -->
+                            <li id="twitter"><a href="#"><img src="../img/twitter-icon-computador.png"></a></li>
+                        </ul>
+                    </div>
                 </nav>
-                <div class="redes-sociais">
-                    <img src="../img/instagram-icon-computador.png" alt="Instagram">
-                    <img src="../img/tiktok-icon-computador.png" alt="TikTok">
-                    <img src="../img/twitter-icon-computador.png" alt="X-Twitter">
-                </div>
-            </header>
-        
+             </header>
+             <!-- conteudo da janela -->
             <div class="conteudo">
-                <div> 
-                    <img id="mapa" src="../img/mapa.png" alt="mapa ilustrativo">
+                <!-- mapa -->
+                <div id="mapa">
+                    <img src="../img/mapa.png">
                 </div>
-                <div class="dados">
-                    <h1> Digite seu nome:</h1>
-                    <img class="user" src="../img/usuario-icon.png" alt="usuário"></img>
-                    <input type="text" class="nome-text" id="nomeJogador">
-                    <button type="button" class="bnt" id="jogarBnt"><img src="../img/play-icon.png"><p>Iniciar</p></button>
+                <!-- escrita do input -->
+                <div class="escrita">
+                    <h1>Digite o seu nome:</h1>
+                    <!-- div conjunto da img do user e o input -->
+                    <div class="input-dados">
+                        <img src="../img/usuario-icon.png">
+                        <input type="text" id="nome-usuario"> 
+                    </div>
+
                 </div>
             </div>
-        </div>
+         </div>
+
         <script src="../js/login.js"></script>
     </body>
 </html>
