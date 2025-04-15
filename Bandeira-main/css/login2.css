@@ -1,15 +1,96 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
 }
+/* Remove o ponto (estilo) da lista */
+ul {
+    list-style: none;
 
+}    
+a{
+    color: #000;
+    font-weight: 500;
+}
 .background {
     object-fit: cover; /* -- vai ser usado para cobrir tudo -- */
     z-index: -1;
     position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .janela{
     z-index: 2;
     background-color: #f9f5e7;
+    margin-left: clamp(5px, 8vw, 45px);
+    margin-right: clamp(5px, 8vw, 45px);
+    border-radius: 40px;
 }
+
+/* Imagem da escrita da logo */
+.logo-escrita{
+    width: 100%;
+    height: clamp(60px, 15vh, 250px);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#img-escrita{
+    width: clamp(20px, 30vw, 200px);
+    
+}
+
+/* Imagem da logo: MENU */
+
+.img-logo img{
+    width: clamp(10px, 15vw, 80px);
+    
+}
+/* Menu de interações, inicio, sobre e report bug */
+
+#sobre img{
+    width: clamp(10px, 10vw, 20px);
+
+    
+}
+
+#inicio img{
+    width: clamp(10px, 10vw, 20px);
+
+    
+}
+
+#report-bug img{
+    width: clamp(10px, 10vw, 20px);
+
+    
+}
+
+#instagram img{
+    width: clamp(10px, 10vw, 20px);
+
+    
+}
+
+#tiktok img{
+    width: clamp(10px, 10vw, 20px);
+
+    
+}
+
+#twitter img{
+    width: clamp(10px, 10vw, 20px);
+
+    
+}
+
+header{
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content:flex-start
+
+
+}
+
