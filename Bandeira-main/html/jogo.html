@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Flag Rush - Jogo</title>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+            
+        <link rel="stylesheet" type="text/css" href="../css/jogo.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com"crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- background -->
+        <video autoplay muted loop class="background">
+            <source src="../img/background-video.mp4" type="video/mp4">
+        </video>
+
+        <!-- Logo -->
+        <section class="FlagRush">
+            <img src="../img/logo-escrita-icon.png" alt="Nome Da Marca">
+        </section>
+
+        <!-- MAIN -->
+        <main>
+            <div class="conteudo one">
+                <div class="barra-progresso" id="barraProgresso">
+                    <span class="etapa"></span>
+                    <span class="etapa"></span>
+                    <span class="etapa"></span>
+                    <span class="etapa"></span>
+                    <span class="etapa"></span>
+                    <span class="etapa"></span>
+                    <span class="etapa"></span>
+                    <span class="etapa"></span>
+                    <span class="etapa"></span>
+                    <span class="etapa"></span>
+                  </div>
+                <h1>Digite o nome da bandeira:</h1>
+                <div id="input">
+                    <img src="../img/brasil-icon.png">
+                    <input type="text" class="resposta">
+                </div>
+                <div id="contagem">
+                    <button type="button" class="bnt">PRÓXIMO<img src="../img/seta-icon.png"></button>
+                     <p id="timer">Timer: 0</p>
+                    <p id="pontuacao">Pontuação: 0</p>
+                </div>
+            </div>
+
+            <div class="modal-overlay" id="modal">
+                <div class="modal-content">
+                    <div class="modal-left">
+                        <h2>Quer sair ?</h2>
+                        <img class="emoji" src="../img/carinha-triste.png">
+                    </div>
+                    <div class="modal-right">
+                        <p>Se você sair agora, <strong>perderá toda a sua pontuação e progresso atual</strong>. Essa ação não poderá ser desfeita.</p>
+                        <button class="btn-modal" id="confirmar">Sim</button>
+                        <button class="btn-modal" id="cancelar">Não</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conteudo two">
+                <button type="button" class="bnnt"><img src="../img/xzinho-icon.png"></button>
+                <img class="bandeira" src="" alt="Bandeira do país">
+            </div>
+        </main>
+
+        <script src="../js/jogo.js"></script>
+    </body>
+</html>

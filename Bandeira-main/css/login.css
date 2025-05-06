@@ -1,0 +1,201 @@
+/* -- Reset -- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    }    
+ul {
+    list-style: none;
+}    
+body {
+    overflow: hidden; 
+}
+body::-webkit-scrollbar {
+    display: none; 
+}
+/* -- Reset -- */
+
+
+/* -- Fundo -- */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* -- vai ser usado para cobrir tudo -- */
+    z-index: -1;
+}
+.Nome {
+    display: flex;          
+    justify-content: center;
+    align-items: center;      
+    height: 60px;           
+    padding: 0 20px; 
+    font-size:large;         
+}
+.Nome img {
+    margin-top: 2rem;
+    max-height: 5rem;         
+    width: auto; 
+}   
+/* -- Fundo -- */ 
+
+
+/* -- Main -- */ 
+main {
+    display: flex;
+    margin: 2.5rem;
+    border-radius: 1rem ;
+    flex-direction: column; /* https://css-tricks.com/wp-content/uploads/2018/10/flex-direction.svg */
+    background-color: #f9f5e7;
+    position: absolute;
+    width: 96%;;
+    height: 100%;
+}
+
+/* -- Topnav -- */ 
+.menu {
+    display: flex;                   
+    justify-content: space-between; 
+    align-items: center;            
+    border-radius: 1rem;
+    padding: 20px;  
+    z-index: 7;      
+    height: 50px;
+    margin-top: 20px;          
+}
+.menu .logo {
+    height: 40px;
+}
+.topicos ul {
+    position: relative;
+    display: flex;                   
+    gap: 20px;                       
+    margin-left: 200px;
+    padding: 0;
+    list-style: none;
+}
+.topicos li img{
+    text-align: center;
+    width: 1rem;
+}
+.topicos li a {
+    line-height: 70px;
+    color: #342164;                   
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    padding: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+.topicos{
+    margin-right: 50px;
+    z-index: 10;
+}
+.redes-sociais{
+    z-index: 10;
+}
+.redes-sociais img {
+    width: 1.3rem;                     
+    margin: 5px 20px;              
+}
+.conteudo {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;                 
+    padding: 20px 20px 0 20px;
+}
+#mapa{
+    margin-top: 6rem;
+    margin-left: 90px;
+    width: 50rem;
+    grid-column: 1/2;
+}
+.conteudo h1{
+    position: relative;
+    margin-left:-2rem;
+    top:90px;
+    margin-top: 5rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 3rem;
+    height:100px;
+    color: #342164; 
+}
+
+.dados{
+    position: relative;
+    margin-top: -14rem;
+    margin-bottom: 14rem;
+    grid-column: 2/2;           
+    border-radius: 1rem;
+    margin-left: -6rem;
+}
+.nome-text{
+  font-size: large;
+  text-align: center;
+}
+
+.user{
+    width: 4.5rem;
+    position: relative;
+    top: 15px
+}
+.dados input{
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    width: 30rem;
+    padding: 15px;
+    border-radius: 1rem;
+    background: #342164;
+    color:#f9f5e7;
+    border: none;
+}
+.bnt {
+    width: 150px;
+    height:40px;
+    background-color: #342164;
+    border-radius: 1rem;
+    color: white;
+    border: none;
+    cursor:grab;  
+    display: flex;             
+    justify-content: center;    
+    align-items: center;        
+    gap: 10px;                 
+    margin-top: 35px;
+    z-index: 6;
+    margin-left: 28rem;
+}
+.bnt img{
+    width: 15px;
+    margin-left: -8px;
+    margin-top: 2px;
+    display: flex;
+    gap: 5px;
+}
+.bnt p{
+    text-align: center;         
+    color: white;
+    margin-left:5px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size:large;
+}
+.bnt:hover {
+    background-color: #442c64;
+}
+.nome-text{
+    font-size: large;
+}
+@media (max-width: 700px){
+    .conteudo{
+        grid-template-columns: 100%;
+
+    }
+
+
+}

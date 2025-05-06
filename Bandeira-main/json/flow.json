@@ -1,0 +1,58 @@
+[
+    {
+        "id": "cbcf25d06740eaab",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1c2af5f291ddcbab",
+        "type": "http in",
+        "z": "cbcf25d06740eaab",
+        "name": "",
+        "url": "/recebedados",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 250,
+        "y": 80,
+        "wires": [
+            [
+                "ac857548e72ab7f5"
+            ]
+        ]
+    },
+    {
+        "id": "ac857548e72ab7f5",
+        "type": "function",
+        "z": "cbcf25d06740eaab",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 80,
+        "wires": [
+            [
+                "cff2a4362ac25f57"
+            ]
+        ]
+    },
+    {
+        "id": "cff2a4362ac25f57",
+        "type": "http response",
+        "z": "cbcf25d06740eaab",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 610,
+        "y": 80,
+        "wires": []
+    }
+]

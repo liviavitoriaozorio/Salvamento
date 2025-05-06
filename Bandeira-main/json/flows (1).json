@@ -1,0 +1,179 @@
+[
+    {
+        "id": "cbcf25d06740eaab",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1c2af5f291ddcbab",
+        "type": "http in",
+        "z": "cbcf25d06740eaab",
+        "name": "",
+        "url": "/recebedados",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "e1114ac9c36ab917"
+            ]
+        ]
+    },
+    {
+        "id": "ac857548e72ab7f5",
+        "type": "function",
+        "z": "cbcf25d06740eaab",
+        "name": "function 1",
+        "func": "let conteudo = msg.payload;\nlet jog = msg.req?.query?.jogador;\nlet pts = parseInt(msg.req?.query?.pontos);\nlet tem = parseInt(msg.req?.query?.tempo);\n\nlet dados = [];\n\ntry {\n    let dadosAntigos = JSON.parse(conteudo);\n    if (Array.isArray(dadosAntigos)) {\n        dados = dadosAntigos;\n    }\n} catch (e) {\n    // Se não conseguir ler o conteúdo, assume lista vazia\n    dados = [];\n}\n\n// Se todos os dados forem válidos, adiciona\nif (jog && !isNaN(pts) && !isNaN(tem)) {\n    dados.push({\n        nome: jog,\n        pontos: pts,\n        tempo: tem\n    });\n}\n\n// Converte para string JSON para salvar no arquivo\nmsg.payload = JSON.stringify(dados, null, 2);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 160,
+        "wires": [
+            [
+                "0378a371b9326ccc"
+            ]
+        ]
+    },
+    {
+        "id": "cff2a4362ac25f57",
+        "type": "http response",
+        "z": "cbcf25d06740eaab",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "5015d93dfe20f567",
+        "type": "debug",
+        "z": "cbcf25d06740eaab",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "0378a371b9326ccc",
+        "type": "file",
+        "z": "cbcf25d06740eaab",
+        "name": "",
+        "filename": "dados.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 710,
+        "y": 160,
+        "wires": [
+            [
+                "5015d93dfe20f567",
+                "cff2a4362ac25f57"
+            ]
+        ]
+    },
+    {
+        "id": "3d1558c72ec08bd3",
+        "type": "http in",
+        "z": "cbcf25d06740eaab",
+        "name": "",
+        "url": "/retornadados",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 460,
+        "wires": [
+            [
+                "c6d9b7d0a27fbbb1"
+            ]
+        ]
+    },
+    {
+        "id": "c6d9b7d0a27fbbb1",
+        "type": "file in",
+        "z": "cbcf25d06740eaab",
+        "name": "",
+        "filename": "dados.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 490,
+        "y": 460,
+        "wires": [
+            [
+                "902f0edfba2417b4"
+            ]
+        ]
+    },
+    {
+        "id": "d2e5ec79a9070493",
+        "type": "http response",
+        "z": "cbcf25d06740eaab",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e1114ac9c36ab917",
+        "type": "file in",
+        "z": "cbcf25d06740eaab",
+        "name": "",
+        "filename": "dados.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 310,
+        "y": 160,
+        "wires": [
+            [
+                "ac857548e72ab7f5"
+            ]
+        ]
+    },
+    {
+        "id": "902f0edfba2417b4",
+        "type": "json",
+        "z": "cbcf25d06740eaab",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 750,
+        "y": 460,
+        "wires": [
+            [
+                "d2e5ec79a9070493"
+            ]
+        ]
+    }
+]
