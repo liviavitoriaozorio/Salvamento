@@ -24,7 +24,7 @@
 
 
         <!-- MAIN (contém o conteúdo central) -->
-        <main>
+        <div class="container">
             <header class="menu">
                 <img src="../img/logo-imagem-icon.png" alt="Logo Da Marca" class="logo">
                 <nav class="topicos">
@@ -41,16 +41,18 @@
                 </div>
             </header>
         
-            <section class="conteudo">
-                <img id="mapa" src="../img/mapa.png" alt="mapa ilustrativo">
-                <h1> Digite seu nome:</h1></div>
+            <div class="conteudo">
+                <div> 
+                    <img id="mapa" src="../img/mapa.png" alt="mapa ilustrativo">
+                </div>
                 <div class="dados">
+                    <h1> Digite seu nome:</h1>
                     <img class="user" src="../img/usuario-icon.png" alt="usuário"></img>
                     <input type="text" class="nome-text" id="nomeJogador">
                     <button type="button" class="bnt" id="jogarBnt"><img src="../img/play-icon.png"><p>Iniciar</p></button>
                 </div>
-            </section>
-        </main>
+            </div>
+        </div>
         <script src="../js/login.js"></script>
     </body>
 </html>
