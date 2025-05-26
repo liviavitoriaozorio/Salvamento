@@ -7,8 +7,14 @@
 /* Remove o ponto (estilo) da lista */
 ul {
     list-style: none;
+    display:flex;
+
 
 }    
+li{
+    display: inline;
+    margin-right: 70px;
+}
 a{
     color: #000;
     font-weight: 500;
@@ -26,71 +32,161 @@ a{
     background-color: #f9f5e7;
     margin-left: clamp(5px, 8vw, 45px);
     margin-right: clamp(5px, 8vw, 45px);
-    border-radius: 40px;
+    padding-top: clamp(5px, 2vh, 40px);
+    margin-top: 30px;
+    height: 88.515vh;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-left: clamp(5px, 15vw, 60px);
+   
 }
-
+h
 /* Imagem da escrita da logo */
 .logo-escrita{
-    width: 100%;
-    height: clamp(60px, 15vh, 250px);
-    display: flex;
+    display: flex;          
     justify-content: center;
-    align-content: center;
+    align-items: center;      
+    height: 60px;           
+    padding: 0 20px; 
 }
-#img-escrita{
-    width: clamp(20px, 30vw, 200px);
-    
+.logo-escrita img{
+    margin-top: 2rem;
+    max-height: 5rem;         
+    width: 10rem; 
+
 }
 
 /* Imagem da logo: MENU */
 
-.img-logo img{
+#img-logo img{
     width: clamp(10px, 15vw, 80px);
-    
+    display: flex;
 }
-/* Menu de interações, inicio, sobre e report bug */
 
+
+/* Menu de interações, inicio, sobre e report bug */
+.menu{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+/* Organiza os icones centrais */
+.interacao ul{
+    display: flex;
+    justify-items: center;
+    align-items: center; 
+
+}
+.redes
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+   
+#sobre a{
+    display:flex;
+    align-items: center;
+}
+
+/* Tamanho dos ícones do menu */
 #sobre img{
     width: clamp(10px, 10vw, 20px);
-
-    
 }
 
 #inicio img{
     width: clamp(10px, 10vw, 20px);
-
-    
 }
 
 #report-bug img{
-    width: clamp(10px, 10vw, 20px);
-
-    
+    width: clamp(10px, 10vw, 20px);  
 }
 
 #instagram img{
     width: clamp(10px, 10vw, 20px);
-
-    
 }
 
 #tiktok img{
-    width: clamp(10px, 10vw, 20px);
-
-    
+    width: clamp(10px, 10vw, 20px);  
 }
 
 #twitter img{
-    width: clamp(10px, 10vw, 20px);
-
-    
+    width: clamp(10px, 10vw, 20px); 
 }
 
-header{
+/* Definições do mapa */
+.conteudo{
+    display: grid; 
+    grid-template-columns: 50% 50%;
+}
+#mapa{
+   grid-column: 1/2;
+    height: auto;
+    left: 0;
+    bottom: 20vh;
+    margin-top: 10vh;
+}
+#mapa img{
+    width: 100%;
+}
+/* Configurações do campo de input (formulário para o login do usuário) */
+.escrita{
+    grid-column: 2/2;     
+    right:15vw;     
+    align-content: center;
+    justify-items: center;
+}
+.input-dados img{
+    width: 4.5rem;
+    top: 15px
+}
+.escrita input{
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    padding: 15px;
+    border-radius: 1rem;
+    background: #342164;
+    color:#f9f5e7;
+    border: none;
+    font-size: 1.5rem ;
+    text-align: center;
+    width: clamp(10px, 45vw, 470px); 
+    height: clamp(15px, 5vh, 120px);
+    padding: 10px;
+}
+.bnt {
     display: flex;
-    flex-wrap:nowrap;
-    justify-content:flex-start
-
-
+    margin-left: 15rem;
+    width: clamp(12px, 15vw, 120px);
+    height:40px;
+    justify-content: center;    
+    align-items: center;        
+    gap: 10px;                 
+    margin-top: 35px;
+    background-color: #342164;
+    border-radius: 1rem;
+    color: white;
+    border: none;
+    cursor:grab;  
 }
-
+.bnt img{
+    display: flex;
+    width: 15px;
+    margin-left: -8px;
+    margin-top: 2px;
+    gap: 5px;
+}
+.bnt p{
+    text-align: center;         
+    color: white;
+    margin-left:5px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size:large;
+}
+.bnt:hover {
+    background-color: #442c64;
+}
