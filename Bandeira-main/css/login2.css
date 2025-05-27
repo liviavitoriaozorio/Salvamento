@@ -1,192 +1,81 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    font-family: "Open Sans", sans-serif;
-}
-/* Remove o ponto (estilo) da lista */
-ul {
-    list-style: none;
-    display:flex;
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Flag Rush - Entrar</title>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <link rel="stylesheet" type="text/css" href="../css/login2.css">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <video autoplay muted loop class="background">
+            <source src="../img/background-video.mp4" type="video/mp4">
+            
+        </video>
+        <!-- Flag Rush -->
+         <div class="logo-escrita">
+         <img id="img-escrita" src="../img/logo-escrita-icon.png">
+         </div>
+        <!-- Janela -->
+        <div class="janela">
+           
+            <!-- Cabeçalho -->
+             <header>
+                <nav>
 
-}    
-li{
-    display: inline;
-    margin-right: 70px;
-}
-a{
-    color: #000;
-    font-weight: 500;
-}
-.background {
-    object-fit: cover; /* -- vai ser usado para cobrir tudo -- */
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
+                    <div class="menu">
+                        
+                            <ul >
+                                <!-- Imagem da logo ilustratitiva -->
+                                <li><img id="img-logo" src="../img/logo-imagem-icon.png"></li>
+                            </ul>
+                            <ul >
+                                <!-- Menu do sobre -->
+                                <li class="interacao"><a href="#"><img src="../img/lampada-icon-computador.png">Sobre</a></li>
+                                <!-- Menu do início -->
+                                <li class="interacao"id="inicio"><a href="#"><img src="../img/home-icon-computador.png">Início</a></li>
+                                <!-- Menu do report bug -->
+                                <li class="interacao"id="report-bug"><a href="#"><img src="../img/bug-icon-computador.png">Report Bug</a></li>
+                            </ul>
+                            <ul >
+                                <!-- Topico do instagram -->
+                                <li class="redes"><a href="#"><img src="../img/instagram-icon-computador.png"></a></li>
+                                <!-- Topico do tiktok -->
+                                <li class="redes"><a href="#"><img src="../img/tiktok-icon-computador.png"></a></li>
+                                <!-- Topico do twitter -->
+                                <li class="redes"><a href="#"><img src="../img/twitter-icon-computador.png"></a></li>
+                            </ul>
+                        
+                    </div>
+                </nav>
+             </header>
+             <!-- conteudo da janela -->
+            <div class="conteudo">
+                <!-- mapa -->
+                <div id="mapa">
+                    <img src="../img/mapa.png">
+                </div>
+                <!-- escrita do input -->
+                <div class="escrita">
+                    <h1>Digite o seu nome:</h1>
+                    <!-- div conjunto da img do user e o input -->
+                    <div class="input-dados">
+                        <img src="../img/usuario-icon.png">
+                        <input type="text" id="nome-usuario"> 
+                    </div>
+                        <div class="botão">
+                            <button type="button" class="bnt" id="jogarBnt"><img src="../img/play-icon.png"><p>Iniciar</p></button>
+                        </div>
 
-.janela{
-    z-index: 2;
-    background-color: #f9f5e7;
-    margin-left: clamp(5px, 8vw, 45px);
-    margin-right: clamp(5px, 8vw, 45px);
-    padding-top: clamp(5px, 2vh, 40px);
-    margin-top: 30px;
-    height: 88.515vh;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    padding-left: clamp(5px, 15vw, 60px);
-   
-}
-h
-/* Imagem da escrita da logo */
-.logo-escrita{
-    display: flex;          
-    justify-content: center;
-    align-items: center;      
-    height: 60px;           
-    padding: 0 20px; 
-}
-.logo-escrita img{
-    margin-top: 2rem;
-    max-height: 5rem;         
-    width: 10rem; 
+                </div>
+            </div>
+        </div>
 
-}
-
-/* Imagem da logo: MENU */
-
-#img-logo img{
-    width: clamp(10px, 15vw, 80px);
-    display: flex;
-}
-
-
-/* Menu de interações, inicio, sobre e report bug */
-.menu{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-
-}
-
-/* Organiza os icones centrais */
-.interacao ul{
-    display: flex;
-    justify-items: center;
-    align-items: center; 
-
-}
-.redes
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-   
-#sobre a{
-    display:flex;
-    align-items: center;
-}
-
-/* Tamanho dos ícones do menu */
-#sobre img{
-    width: clamp(10px, 10vw, 20px);
-}
-
-#inicio img{
-    width: clamp(10px, 10vw, 20px);
-}
-
-#report-bug img{
-    width: clamp(10px, 10vw, 20px);  
-}
-
-#instagram img{
-    width: clamp(10px, 10vw, 20px);
-}
-
-#tiktok img{
-    width: clamp(10px, 10vw, 20px);  
-}
-
-#twitter img{
-    width: clamp(10px, 10vw, 20px); 
-}
-
-/* Definições do mapa */
-.conteudo{
-    display: grid; 
-    grid-template-columns: 50% 50%;
-}
-#mapa{
-   grid-column: 1/2;
-    height: auto;
-    left: 0;
-    bottom: 20vh;
-    margin-top: 10vh;
-}
-#mapa img{
-    width: 100%;
-}
-/* Configurações do campo de input (formulário para o login do usuário) */
-.escrita{
-    grid-column: 2/2;     
-    right:15vw;     
-    align-content: center;
-    justify-items: center;
-}
-.input-dados img{
-    width: 4.5rem;
-    top: 15px
-}
-.escrita input{
-    font-weight: 400;
-    font-family: "Open Sans", sans-serif;
-    padding: 15px;
-    border-radius: 1rem;
-    background: #342164;
-    color:#f9f5e7;
-    border: none;
-    font-size: 1.5rem ;
-    text-align: center;
-    width: clamp(10px, 45vw, 470px); 
-    height: clamp(15px, 5vh, 120px);
-    padding: 10px;
-}
-.bnt {
-    display: flex;
-    margin-left: 15rem;
-    width: clamp(12px, 15vw, 120px);
-    height:40px;
-    justify-content: center;    
-    align-items: center;        
-    gap: 10px;                 
-    margin-top: 35px;
-    background-color: #342164;
-    border-radius: 1rem;
-    color: white;
-    border: none;
-    cursor:grab;  
-}
-.bnt img{
-    display: flex;
-    width: 15px;
-    margin-left: -8px;
-    margin-top: 2px;
-    gap: 5px;
-}
-.bnt p{
-    text-align: center;         
-    color: white;
-    margin-left:5px;
-    margin-bottom: 3px;
-    font-weight: 600;
-    font-size:large;
-}
-.bnt:hover {
-    background-color: #442c64;
-}
+        <script src="../js/login.js"></script>
+    </body>
+</html>
