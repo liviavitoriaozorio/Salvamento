@@ -1,81 +1,154 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <title>Flag Rush - Entrar</title>
-    
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-        <link rel="stylesheet" type="text/css" href="../css/login2.css">
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <video autoplay muted loop class="background">
-            <source src="../img/background-video.mp4" type="video/mp4">
-            
-        </video>
-        <!-- Flag Rush -->
-         <div class="logo-escrita">
-         <img id="img-escrita" src="../img/logo-escrita-icon.png">
-         </div>
-        <!-- Janela -->
-        <div class="janela">
-           
-            <!-- Cabeçalho -->
-             <header>
-                <nav>
+}
+video{
+    position:fixed;
+     object-fit: cover;
+     z-index: -1;
+}
+/* Remove o ponto (estilo) da lista */
+ul {
+    list-style: none;
+    display:flex;
+    justify-content: center;
+}    
+li{
+    display: inline;
+    margin-right: 70px;
+}
+a{
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    align-items: center;
+}
+.janela{
+    max-width: 1300px;
+    bottom: 0;
+    top:15%;
+    background-color: #f9f5e7;
+    position: absolute;
+    margin-left: 2.5rem ;
+    margin-right: 2.5rem ;
+    margin-top: 0.6rem;
+    padding: 20px;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+/* Imagem da escrita da logo */
+.logo-escrita{
+    display:flex;
+    width: 100%;
+    height: clamp(60px, 15vh, 250px);
+    align-content: center;
+    justify-content: center;     
+             
+}
+.logo-escrita img{
+    margin-top: 0.6rem;
+    max-height: 5rem;         
+}
 
-                    <div class="menu">
-                        
-                            <ul >
-                                <!-- Imagem da logo ilustratitiva -->
-                                <li><img id="img-logo" src="../img/logo-imagem-icon.png"></li>
-                            </ul>
-                            <ul >
-                                <!-- Menu do sobre -->
-                                <li class="interacao"><a href="#"><img src="../img/lampada-icon-computador.png">Sobre</a></li>
-                                <!-- Menu do início -->
-                                <li class="interacao"id="inicio"><a href="#"><img src="../img/home-icon-computador.png">Início</a></li>
-                                <!-- Menu do report bug -->
-                                <li class="interacao"id="report-bug"><a href="#"><img src="../img/bug-icon-computador.png">Report Bug</a></li>
-                            </ul>
-                            <ul >
-                                <!-- Topico do instagram -->
-                                <li class="redes"><a href="#"><img src="../img/instagram-icon-computador.png"></a></li>
-                                <!-- Topico do tiktok -->
-                                <li class="redes"><a href="#"><img src="../img/tiktok-icon-computador.png"></a></li>
-                                <!-- Topico do twitter -->
-                                <li class="redes"><a href="#"><img src="../img/twitter-icon-computador.png"></a></li>
-                            </ul>
-                        
-                    </div>
-                </nav>
-             </header>
-             <!-- conteudo da janela -->
-            <div class="conteudo">
-                <!-- mapa -->
-                <div id="mapa">
-                    <img src="../img/mapa.png">
-                </div>
-                <!-- escrita do input -->
-                <div class="escrita">
-                    <h1>Digite o seu nome:</h1>
-                    <!-- div conjunto da img do user e o input -->
-                    <div class="input-dados">
-                        <img src="../img/usuario-icon.png">
-                        <input type="text" id="nome-usuario"> 
-                    </div>
-                        <div class="botão">
-                            <button type="button" class="bnt" id="jogarBnt"><img src="../img/play-icon.png"><p>Iniciar</p></button>
-                        </div>
 
-                </div>
-            </div>
-        </div>
 
-        <script src="../js/login.js"></script>
-    </body>
-</html>
+
+/* Menu de interações, inicio, sobre e report bug */
+
+/* Organiza os icones centrais */
+/* Imagem da logo: MENU */
+
+.logo-imagem img{
+    width: clamp(20px, 10vw, 80px);
+
+}
+.interacao img{
+    width: clamp(10px, 10vw, 20px);
+
+     
+}
+.redes img{
+    width: clamp(10px, 10vw, 20px);
+}
+
+/* Definições do mapa */
+.conteudo{
+    display: grid; 
+    grid-template-columns: 50% 50%;
+}
+#mapa{
+    display: grid;
+    grid-column: 1/2;
+    height: auto;
+    max-width:auto;
+    left: 0;
+    bottom: 20vh;
+    margin-top: 10vh;
+}
+#mapa img{
+    width: 100%;
+}
+/* Configurações do campo de input (formulário para o login do usuário) */
+.escrita{
+    display: grid;
+    margin-top: 20vh;
+    max-width: auto;
+    grid-column: 2/2;    
+    place-items: center; 
+    align-items: center;
+}
+.input-dados img{
+    width: 4.5rem;
+    top: 15px
+}
+.escrita input{
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    padding: 15px;
+    border-radius: 1rem;
+    background: #342164;
+    color:#f9f5e7;
+    border: none;
+    font-size: 1.5rem ;
+    text-align: center;
+    width: clamp(10px, 45vw, 470px); 
+    height: clamp(15px, 5vh, 120px);
+    padding: 10px;
+}
+.bnt {
+    display: flex;
+    position: static;
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    margin-left: 15rem;
+    width: clamp(12px, 15vw, 120px);
+    height:40px;
+    justify-content: center;    
+    align-items: center;        
+    gap: 10px;                 
+    margin-top: 35px;
+    background-color: #342164;
+    border-radius: 1rem;
+    color: white;
+    border: none;
+    cursor:grab;  
+}
+.bnt img{
+    width: 15px;
+    margin-left: -8px;
+    margin-top: 2px;
+    gap: 5px;
+}
+.bnt p{
+    text-align: center;         
+    color: white;
+    margin-left:5px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size:large;
+}
+.bnt:hover {
+    background-color: #442c64;
+}
