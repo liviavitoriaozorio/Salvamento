@@ -2,18 +2,25 @@
     padding: 0;
     margin: 0;
     font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
 
 }
 video{
+    right:0;
+    left: 0;
+    bottom: 0;
     position:fixed;
-     object-fit: cover;
-     z-index: -1;
+    object-fit: cover;
+    z-index: -1;
+    max-height: auto;
 }
 /* Remove o ponto (estilo) da lista */
 ul {
-    list-style: none;
     display:flex;
-    justify-content: center;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+  
 }    
 li{
     display: inline;
@@ -22,18 +29,20 @@ li{
 a{
     color: #000;
     font-weight: 500;
+    font-size: 0.97rem;
     text-decoration: none;
     align-items: center;
 }
 .janela{
-    max-width: 1300px;
+    left: 0;
+    right:0;
     bottom: 0;
     top:15%;
     background-color: #f9f5e7;
     position: absolute;
     margin-left: 2.5rem ;
     margin-right: 2.5rem ;
-    margin-top: 0.6rem;
+    margin-top: 0.2rem;
     padding: 20px;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
@@ -42,14 +51,14 @@ a{
 .logo-escrita{
     display:flex;
     width: 100%;
-    height: clamp(60px, 15vh, 250px);
+    height: clamp(60px, 12vh, 250px);
     align-content: center;
     justify-content: center;     
              
 }
 .logo-escrita img{
     margin-top: 0.6rem;
-    max-height: 5rem;         
+    max-height: 6rem;         
 }
 
 
@@ -93,15 +102,21 @@ a{
 /* Configurações do campo de input (formulário para o login do usuário) */
 .escrita{
     display: grid;
+    grid-column: 2/2; 
+    right: 10vw;
+    position:absolute;
     margin-top: 20vh;
     max-width: auto;
-    grid-column: 2/2;    
     place-items: center; 
-    align-items: center;
+  
+    
 }
-.input-dados img{
+#user{
     width: 4.5rem;
-    top: 15px
+    position:absolute;
+    max-width: auto;
+    height: auto;
+
 }
 .escrita input{
     font-weight: 400;
