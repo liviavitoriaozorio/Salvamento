@@ -24,14 +24,22 @@ ul {
 }    
 li{
     display: inline;
-    margin-right: 70px;
+    margin-right: 40px;
+    
 }
+
+
 a{
-    color: #000;
-    font-weight: 500;
+    color: #342164;
+    font-weight: 600;
     font-size: 0.97rem;
     text-decoration: none;
     align-items: center;
+    line-height: 70px;
+    display: inline;
+}
+a img{
+    bottom: 0;
 }
 .janela{
     left: 0;
@@ -68,18 +76,30 @@ a{
 
 /* Organiza os icones centrais */
 /* Imagem da logo: MENU */
+.redes{
+    justify-items: center;
+    margin-right: 2vw;
+    
+}
+.interacao{
+    margin-left: 4vw;
+
+}
 
 .logo-imagem img{
     width: clamp(20px, 10vw, 80px);
+    margin-left: 20px;
+} 
 
-}
 .interacao img{
     width: clamp(10px, 10vw, 20px);
-
-     
+    margin-right: 0.4vw;
 }
+     
+
 .redes img{
     width: clamp(10px, 10vw, 20px);
+    margin-right: -25px;
 }
 
 /* Definições do mapa */
@@ -95,9 +115,11 @@ a{
     left: 0;
     bottom: 20vh;
     margin-top: 10vh;
+    
 }
 #mapa img{
     width: 100%;
+    padding: 2rem;
 }
 /* Configurações do campo de input (formulário para o login do usuário) */
 .escrita{
@@ -105,18 +127,11 @@ a{
     grid-column: 2/2; 
     right: 10vw;
     position:absolute;
-    margin-top: 20vh;
+    margin-top: 13vh;
     max-width: auto;
     place-items: center; 
-  
+    padding: 2rem;;
     
-}
-#user{
-    width: 4.5rem;
-    position:absolute;
-    max-width: auto;
-    height: auto;
-
 }
 .escrita input{
     font-weight: 400;
@@ -132,12 +147,34 @@ a{
     height: clamp(15px, 5vh, 120px);
     padding: 10px;
 }
+.escrita h1{
+    color: #342164;
+    padding: 2rem;
+    margin: 2rem;
+    margin-left: 5rem;
+    font-size: 2rem;
+    font-weight: 650;
+
+}
+
+#input-img-text{
+    display: flex;
+    align-items: center;
+}
+#user{
+    left: 0;
+    width: 4.5rem;
+    position:relative;
+    max-width: auto;
+    height: auto;
+    vertical-align: baseline;
+}
 .bnt {
     display: flex;
-    position: static;
+    position: relative;
     flex-wrap:nowrap;
-    justify-content:flex-start;
-    margin-left: 15rem;
+    margin-left: 3rem;
+    padding: 20px;
     width: clamp(12px, 15vw, 120px);
     height:40px;
     justify-content: center;    
@@ -149,21 +186,178 @@ a{
     color: white;
     border: none;
     cursor:grab;  
+    vertical-align: baseline;
+    min-width: 50px;
 }
 .bnt img{
+    position:absolute;
     width: 15px;
-    margin-left: -8px;
+    left: 17px;
     margin-top: 2px;
     gap: 5px;
+    padding: 1px;
 }
 .bnt p{
+    position:absolute;
     text-align: center;         
     color: white;
-    margin-left:5px;
-    margin-bottom: 3px;
+    margin-left:10px;
+    margin-bottom: 1px;
     font-weight: 600;
     font-size:large;
+    padding: 1px;
+    min-width: 50px;
+    
 }
 .bnt:hover {
     background-color: #442c64;
 }
+
+/* Para telas menores que 900px */
+@media (max-width: 900px) {
+    /* Ajusta a largura das imagens e ícones no menu */
+    .logo-imagem img {
+        width: clamp(10px, 10vw, 10vw); /* Ajusta as imagens para uma largura menor em telas pequenas */
+        padding: 10px;
+
+    }
+
+     .redes img{
+         width: clamp(10px, 3vw, 5vw);
+     }
+    /* Layout das redes sociais (em vez de ficar horizontal, pode organizar verticalmente) */
+    .redes {
+        display: inline;
+        margin-right: 0;  /* Remove a margem à direita */
+        width: 50vw;
+        height: 10vh;
+       margin-left: 20vw;
+       margin-right: 10vw;
+    }
+
+    /* Ajustando o layout do menu (ul e li) */
+    ul {
+        flex-direction: column;  /* Organiza os itens do menu verticalmente */
+        align-items: center;  /* Alinha os itens no centro */
+        justify-content: center;  /* Centraliza os itens */
+    }
+    li {
+       margin-right: 40px;  /* Remove a margem direita para alinhar os itens */
+        margin-bottom: 10px;  /* Espaço entre os itens */
+    }
+
+    /* Ajustes na logo */
+    .logo-escrita {
+        height: clamp(60px, 20vh, 150px);  /* Ajusta a altura da logo */
+    }
+    .logo-escrita img {
+        margin-top: 0.6rem;
+        max-height: 5rem;  /* Reduz o tamanho da logo */
+    }
+
+    /* Ajuste no contêiner da janela */
+    .janela {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 15px;
+    }
+
+    /* Ajuste no mapa */
+    #mapa {
+        grid-column: 1 / -1;  /* Muda o mapa para ocupar toda a largura */
+        margin-top: 10vh;
+    }
+
+    #mapa img {
+        padding: 1rem;
+    }
+
+    /* Ajustes no campo de input */
+    .escrita {
+        grid-column: 1 / -1;  /* Coloca o formulário ocupando toda a largura */
+        margin-top: 15vh;
+        max-width: 100%;
+        padding: 1rem;
+    }
+    .escrita input {
+        width: 90%; /* Ajusta o tamanho do input para ocupar mais espaço */
+        height: 50px;
+    }
+
+    /* Ajustes no botão */
+    .bnt {
+        width: 100%;  /* Faz o botão ocupar toda a largura possível */
+        padding: 15px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .bnt img {
+        width: 20px;
+        left: 10px;
+    }
+
+    /* Ajustes na altura da escrita */
+    .escrita h1 {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+        margin-left: 0;
+    }
+    .interacao{
+        margin-left: 2rem;
+    }
+    .interacao img{
+        margin-right: 0.4vw;
+    }
+}
+
+/* Para telas menores que 600px*/
+@media (max-width: 600px) {
+    /* Organiza a logo centralizada e ajusta a altura */
+    .logo-escrita {
+        height: clamp(50px, 25vh, 120px);
+    }
+    .logo-escrita img {
+        margin-top: 0.6rem;
+        max-height: 4rem;
+    }
+
+    /* Ajuste nas imagens das redes sociais */
+    .logo-imagem img, .redes img {
+        width: clamp(10px, 10vw, 10vw);
+        margin: 0;
+    
+    }
+
+    /* Ajusta a estrutura da janela (janela, logo, e ícones) */
+    .janela {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        padding: 10px;
+    }
+
+    /* Mapa ocupa a tela inteira */
+    #mapa {
+        margin-top: 5vh;
+        grid-column: 1 / -1;
+    }
+
+    /* Formulário ocupa toda a tela (menos o mapa) */
+    .escrita {
+        grid-column: 1 / -1;
+        margin-top: 10vh;
+        padding: 1rem;
+    }
+
+    /* Ajuste do botão */
+    .bnt {
+        width: 90%;
+        margin-top: 15px;
+    }
+
+    /* Reduzindo tamanho do input */
+    .escrita input {
+        width: 90%;
+        height: 45px;
+    }
+} 
+ 
