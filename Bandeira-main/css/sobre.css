@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+     
+
+}
+video{
+    bottom: 0;
+    height:100%;
+    width: 100%;
+    position:fixed;
+    object-fit: cover;
+    z-index: -1;
+   
+}
+/* Remove o ponto (estilo) da lista */
+ul {
+    display:flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+  
+}    
+li{
+    display: inline;
+    margin-right: 40px;
+    
+}
+
+
+a{
+    color: #342164;
+    font-weight: 600;
+    font-size: 0.97rem;
+    text-decoration: none;
+    align-items: center;
+    line-height: 70px;
+    display: inline;
+    white-space:nowrap;
+}
+a img{
+    bottom: 0;
+}
+.janela{
+    left: 0;
+    right:0;
+    bottom: 0;
+    top:15%;
+    background-color: #f9f5e7;
+    position: absolute;
+    margin-left: 2.5rem ;
+    margin-right: 2.5rem ;
+    margin-top: 0.2rem;
+    padding: 20px;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+/* Imagem da escrita da logo */
+.logo-escrita{
+    display:flex;
+    width: 100%;
+    height: clamp(60px, 12vh, 250px);
+    align-content: center;
+    justify-content: center;    
+    margin-top: 2vh; 
+             
+}
+.logo-escrita img{
+   
+    max-height: 6rem;         
+}
+
+
+
+
+/* Menu de interações, inicio, sobre e report bug */
+
+/* Organiza os icones centrais */
+/* Imagem da logo: MENU */
+.redes{
+    justify-items: center;
+    margin-right: 2vw;
+    
+}
+.interacao{
+    margin-left: 4vw;
+
+}
+
+.logo-imagem img{
+    width: clamp(20px, 10vw, 80px);
+    margin-left: 20px;
+} 
+
+.interacao img{
+    width: clamp(10px, 10vw, 20px);
+    margin-right: 0.4vw;
+}
+     
+
+.redes img{
+    width: clamp(10px, 10vw, 20px);
+    margin-right: -10px;
+}
+
+/* Definições do mapa */
+.conteudo{
+    display: grid; 
+    grid-template-rows: 50% 50%;
+    justify-content: center;
+}
+.conteudo h1{
+    display: grid;
+    grid: 1/2;
+    font-size: 0.97rem;
+    color: #342164;
+    font-weight: 600;
+    padding: 1rem;
+    margin: 1rem;
+  
+
+}
+@media (max-width: 900px) {
+    /* Ajusta a largura das imagens e ícones no menu */
+    .logo-imagem{
+        margin: 0;
+         padding: 10px;
+
+    }
+    .logo-imagem img {
+        width: clamp(10px, 13vw, 15vw); /* Ajusta as imagens para uma largura menor em telas pequenas */
+
+
+    }
+
+     .redes img{
+         width: clamp(10px, 3vw, 5vw);
+        
+     }
+    /* Layout das redes sociais (em vez de ficar horizontal, pode organizar verticalmente) */
+    .redes {
+        display: inline;
+       padding: 10px;
+       margin: 0;
+        top: 5vh;
+    }
+
+    /* Ajustando o layout do menu (ul e li) */
+    ul {
+        flex-direction: column;  /* Organiza os itens do menu verticalmente */
+        align-items: center;  /* Alinha os itens no centro */
+        justify-content: center;  /* Centraliza os itens */
+    }
+    li {
+       margin-right: 40px;  /* Remove a margem direita para alinhar os itens */
+        margin-bottom: 10px;  /* Espaço entre os itens */
+    }
+
+    /* Ajustes na logo */
+   
+
+    /* Ajuste no contêiner da janela */
+    .janela {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 15px;
+    }
+
+    /* Ajuste no mapa */
+    #mapa {
+         /* Muda o mapa para ocupar toda a largura */
+        margin-top: 5vh;
+    }
+
+    #mapa img {
+        padding: 1rem;
+    }
+
+    /* Ajustes no campo de input */
+    .escrita {
+       /* Coloca o formulário ocupando toda a largura */
+      padding: 0;
+      margin-top: 5vh;
+      width: 100%
+
+    }
+    .escrita h1{
+      
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+       
+    }
+    .escrita input {
+        width: 25vw; /* Ajusta o tamanho do input para ocupar mais espaço */
+        margin-top: 1vh;
+    }
+
+    /* Ajustes no botão */
+    .bnt {
+        width: 15vw;  /* Faz o botão ocupar toda a largura possível */
+        height: 4vh;
+        padding: 15px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .bnt img {
+        width: 10px;
+        left: 10px;
+    }
+    .bnt p{
+        font-size: 0.8rem;
+    }
+   #user{
+    width: 50px;
+   }
+    
+}
+
+/* Para telas menores que 600px*/
+@media (max-width: 450px) {
+    .interacao{
+       width:300px;
+    height: 50px;
+
+    }
+    .interacao img{
+        width:15px;
+    }
+    a{
+        font-size: 0.7rem;
+    }
+     .bnt p{
+        font-size: 0.6rem;
+    }
+   #user{
+    width: 40px;
+   }
+    
+}
+   
