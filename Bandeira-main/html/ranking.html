@@ -42,13 +42,32 @@
             </header>
         
             <section class="container">
-              <div class="ranking-list" id="ranking-list">
-                <!-- Itens do ranking vão ser inseridos aqui via JavaScript -->
-              </div>
+                <div id="ranking" class="ranking-container">
+                    <div class="podium-container">
+                        <div class="podium">
+                        <div class="podium-step second">
+                            <div class="position">2º</div>
+                            <div class="player-name" id="second-name">---</div>
+                        </div>
+                        <div class="podium-step first">
+                            <div class="position">1º</div>
+                            <div class="player-name" id="first-name">---</div>
+                        </div>
+                        <div class="podium-step third">
+                            <div class="position">3º</div>
+                            <div class="player-name" id="third-name">---</div>
+                        </div>
+                        </div>
+                    
+                        <div class="player-list" id="player-list">
+                        <!-- A lista dos jogadores será populada aqui via JS -->
+                        </div>
+                    </div>                  
+                </div>
             </section>
               
         </main>
-        <script src="../js/login.js"></script>
+        <script src="../js/ranking.js"></script>
     </body>
 </html>
 
